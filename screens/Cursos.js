@@ -39,7 +39,7 @@ const Cursos = () => {
             Lógica de programação
           </Text>
           <Text style={[styles.newThe3d, styles.newPosition]}>
-            criação de algoritmo e programas
+            Criação de algoritmo e programas
           </Text>
           <Image
             style={[styles.boxCodeIcon, styles.iconLayout1]}
@@ -58,7 +58,7 @@ const Cursos = () => {
             Desenvolvimento Web
           </Text>
           <Text style={[styles.newThe3d, styles.newPosition]}>
-            criação de algoritmo e programas
+            criação de páginas
           </Text>
         </View>
         <View style={[styles.rectangleContainer, styles.groupPosition]}>
@@ -67,7 +67,7 @@ const Cursos = () => {
             Orientação a Objetos
           </Text>
           <Text style={[styles.newThe3d, styles.newPosition]}>
-            criação de algoritmo e programas
+            Introdução ao paradigma
           </Text>
           <Image
             style={[styles.treeIcon, styles.iconLayout1]}
@@ -81,7 +81,7 @@ const Cursos = () => {
             Inteligência Artificial
           </Text>
           <Text style={[styles.newThe3d, styles.newPosition]}>
-            criação de algoritmo e programas
+            Conceitos iniciais
           </Text>
           <Image
             style={[styles.personfillviewfinderIcon, styles.iconLayout]}
