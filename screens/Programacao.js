@@ -11,17 +11,28 @@ import {
   FontFamily,
 } from "../GlobalStyles";
 
+
 const Programacao = () => {
+  // Hook para acessar a navegação
   const navigation = useNavigation();
 
   return (
+    // SafeAreaView para garantir que o conteúdo não sobreponha áreas seguras do dispositivo
     <SafeAreaView style={styles.safeArea}>
+      
+      {/* Container principal da tela Programacao */}
       <View style={styles.programacao}>
+        
+        {/* Componente de fundo ou decorativo */}
         <View style={styles.programacaoChild} />
+        
+        {/* Botão para navegar para a tela "Cursos" */}
         <Pressable
           style={[styles.buttonParent, styles.buttonLayout]}
           onPress={() => navigation.navigate("Cursos")}
         >
+          
+          {/* Container para o ícone dentro do botão */}
           <View style={[styles.button, styles.buttonFlexBox]}>
             <Image
               style={styles.icon}
@@ -29,23 +40,34 @@ const Programacao = () => {
               source={require("../assets/icon.png")}
             />
           </View>
+          
+          {/* Ícone de seta para trás */}
           <Image
             style={[styles.chevronbackwardIcon, styles.iconPosition]}
             contentFit="cover"
             source={require("../assets/chevronbackward.png")}
           />
         </Pressable>
+        
+        {/* Imagem principal da tela */}
         <Image
           style={styles.vlibrasImg41Icon}
           contentFit="cover"
           source={require("../assets/vlibrasimg4-1.png")}
         />
+        
+        {/* Container para a seção de código */}
         <View style={styles.boxCodeParent}>
+          
+          
+          {/* Ícone relacionado ao código */}
           <Image
             style={[styles.boxCodeIcon, styles.iconPosition]}
             contentFit="cover"
             source={require("../assets/boxcode1.png")}
           />
+          
+          {/* Container para o texto dentro da seção de código */}
           <View style={[styles.groupWrapper, styles.wrapperLayout]}>
             <View
               style={[styles.lgicaDeProgramaoWrapper, styles.wrapperLayout]}
@@ -56,6 +78,9 @@ const Programacao = () => {
             </View>
           </View>
         </View>
+        
+        
+        {/* Outra imagem na tela */}
         <Image
           style={styles.programmingInicial1Icon}
           contentFit="cover"
@@ -69,7 +94,7 @@ const Programacao = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: Color.colorMediumblue, // Ensures the background matches the top bar color
+    backgroundColor: Color.colorMediumblue, 
   },
   buttonLayout: {
     height: 52,
@@ -89,11 +114,11 @@ const styles = StyleSheet.create({
     height: 62,
     width: 365,
     position: "absolute",
-    alignSelf: "center", // Centers the text horizontally
+    alignSelf: "center", 
   },
   programacaoChild: {
     backgroundColor: Color.colorMediumblue,
-    width: "100%", // Makes the blue box span the full width of the screen
+    width: "100%", 
     height: 110,
     left: 0,
     position: "absolute",

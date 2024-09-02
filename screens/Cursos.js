@@ -10,43 +10,62 @@ import {
   StyleVariable,
   Padding,
 } from "../GlobalStyles";
-
 const Cursos = () => {
+  // Hook para acessar a navegação
   const navigation = useNavigation();
 
   return (
+    // SafeAreaView garante que o conteúdo não fique sobreposto às áreas não seguras da tela
     <SafeAreaView style={styles.safeArea}>
+      
+      {/* Container principal da tela Cursos */}
       <View style={styles.cursos}>
+        
+        {/* Área azul no topo */}
         <View style={[styles.cursosChild, styles.cursosChildPosition]} />
+
+        {/* Grupo que contém o título e uma imagem */}
         <View style={[styles.groupParent, styles.reaLayout]}>
+          
+          {/* Container do título "ÁREA DE APRENDIZADO" */}
           <View style={[styles.reaDeAprendizadoWrapper, styles.reaLayout]}>
             <Text style={[styles.reaDeAprendizado, styles.buttonFlexBox]}>
               ÁREA DE APRENDIZADO
             </Text>
           </View>
+
+          {/* Imagem associada ao título */}
           <Image
             style={styles.groupChild}
             contentFit="cover"
             source={require("../assets/group-3.png")}
           />
         </View>
+
+        {/* Pressable para navegação para a tela "Programacao" */}
         <Pressable
           style={[styles.rectangleParent, styles.groupPosition]}
           onPress={() => navigation.navigate("Programacao")}
         >
           <View style={styles.rectangle} />
+
+          {/* Esse eh o retangulo para os cursos. Iremos criar um componente so para reaproveita-los */}
           <Text style={[styles.newCategoryCourse, styles.newPosition]}>
             Lógica de programação
           </Text>
           <Text style={[styles.newThe3d, styles.newPosition]}>
             Criação de algoritmo e programas
           </Text>
+
+          {/* Imagem associada à categoria */}
           <Image
             style={[styles.boxCodeIcon, styles.iconLayout1]}
             contentFit="cover"
             source={require("../assets/boxcode.png")}
           />
         </Pressable>
+
+        {/* retangulo para o curso */}
         <View style={[styles.rectangleGroup, styles.groupPosition]}>
           <View style={styles.rectangle} />
           <Image
@@ -61,6 +80,8 @@ const Cursos = () => {
             criação de páginas
           </Text>
         </View>
+
+        {/* retangulo para o curso */}
         <View style={[styles.rectangleContainer, styles.groupPosition]}>
           <View style={styles.rectangle} />
           <Text style={[styles.newCategoryCourse, styles.newPosition]}>
@@ -75,6 +96,8 @@ const Cursos = () => {
             source={require("../assets/tree.png")}
           />
         </View>
+
+        {/* retangulo para o curso */}
         <View style={[styles.groupView, styles.groupPosition]}>
           <View style={styles.rectangle} />
           <Text style={[styles.newCategoryCourse, styles.newPosition]}>
@@ -89,6 +112,8 @@ const Cursos = () => {
             source={require("../assets/personfillviewfinder.png")}
           />
         </View>
+
+        {/* Botão para navegação para a tela "PaginaInicial" */}
         <Pressable
           style={[styles.buttonParent, styles.buttonLayout]}
           onPress={() => navigation.navigate("PaginaInicial")}
@@ -114,7 +139,7 @@ const Cursos = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: Color.colorMediumblue, // Sets the background color to match the blue box
+    backgroundColor: Color.colorMediumblue,
   },
   cursosChildPosition: {
     top: 0,
@@ -124,7 +149,7 @@ const styles = StyleSheet.create({
     height: 62,
     width: 365,
     position: "absolute",
-    alignSelf: "center", // Center the area horizontally
+    alignSelf: "center", 
   },
   buttonFlexBox: {
     justifyContent: "center",
@@ -192,7 +217,7 @@ const styles = StyleSheet.create({
   },
   groupParent: {
     top: 27,
-    alignSelf: "center", // Center the group horizontally
+    alignSelf: "center", 
   },
   rectangle: {
     height: "100%",

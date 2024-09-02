@@ -6,16 +6,24 @@ import { useNavigation } from "@react-navigation/native";
 import { Padding, Border, Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const PaginaInicial = () => {
+  // Hook para acessar a navegação
   const navigation = useNavigation();
 
   return (
+    // Container principal da tela PaginaInicial
     <View style={styles.paginaInicial}>
+      
+      {/* Gradiente linear que faz a transição de cor de cima para baixo responsavel pelo background */}
       <LinearGradient
         style={styles.paginaInicialChild}
         locations={[0.28, 1]}
         colors={["#fffefe", "#0b349c"]}
       />
+      
+      {/* Container para os botões de navegação */}
       <View style={styles.button3Parent}>
+        
+        {/* Botão para navegar para a tela "Cursos" */}
         <Pressable
           style={[styles.button3, styles.buttonLayout]}
           onPress={() => navigation.navigate("Cursos")}
@@ -26,6 +34,8 @@ const PaginaInicial = () => {
             </Text>
           </View>
         </Pressable>
+        
+        {/* Botão para navegar para a tela "SobreNos" */}
         <Pressable
           style={[styles.button4, styles.buttonLayout]}
           onPress={() => navigation.navigate("SobreNos")}
@@ -35,6 +45,8 @@ const PaginaInicial = () => {
           </View>
         </Pressable>
       </View>
+      
+      {/* Imagem que é exibida na tela principal */}
       <Image
         style={styles.image3Icon}
         contentFit="cover"
@@ -43,7 +55,6 @@ const PaginaInicial = () => {
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   buttonLayout: {
     paddingVertical: Padding.p_lg,

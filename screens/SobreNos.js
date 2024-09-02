@@ -15,12 +15,21 @@ import {
 } from "../GlobalStyles";
 
 const SobreNos = () => {
+  
+  // Hook para acessar a navegação entre telas
   const navigation = useNavigation();
 
   return (
+    // SafeAreaView para garantir que o conteúdo não sobreponha áreas seguras do dispositivo
     <SafeAreaView style={styles.safeArea}>
+      
+      {/* Container principal da tela SobreNos */}
       <View style={styles.sobreNos}>
+        
+        {/* Componente decorativo ou de fundo */}
         <View style={styles.sobreNosChild} />
+        
+        {/* Container para o título "SOBRE NÓS" */}
         <View style={[styles.sobreNosInner, styles.sobreLayout]}>
           <View style={[styles.sobreNsWrapper, styles.sobreLayout]}>
             <Text style={[styles.sobreNs, styles.buttonFlexBox]}>
@@ -28,10 +37,14 @@ const SobreNos = () => {
             </Text>
           </View>
         </View>
+        
+        {/* Botão para navegar de volta para a tela "PaginaInicial" */}
         <Pressable
           style={[styles.buttonParent, styles.buttonLayout]}
           onPress={() => navigation.navigate("PaginaInicial")}
         >
+          
+          {/* Contêiner para o ícone dentro do botão */}
           <View style={[styles.button, styles.buttonLayout]}>
             <Image
               style={styles.icon}
@@ -39,15 +52,21 @@ const SobreNos = () => {
               source={require("../assets/icon.png")}
             />
           </View>
+          
+          {/* Ícone de seta para voltar */}
           <Image
             style={styles.chevronbackwardIcon}
             contentFit="cover"
             source={require("../assets/chevronbackward.png")}
           />
         </Pressable>
+        
+        {/* Componentes personalizados que representam grupos de contatos */}
         <ContactsGroup2 />
         <ContactsGroup1 />
         <ContactsGroup />
+        
+        {/* Ícones de redes sociais */}
         <Image
           style={[styles.githubIcon, styles.iconLayout]}
           contentFit="cover"
@@ -71,11 +90,11 @@ const SobreNos = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: Color.colorMediumblue, // Ensures the background matches the top bar color
+    backgroundColor: Color.colorMediumblue, 
   },
   sobreLayout: {
     height: 60,
-    width: "100%", // Updated to use full width
+    width: "100%", 
     position: "absolute",
   },
   buttonFlexBox: {
@@ -99,7 +118,7 @@ const styles = StyleSheet.create({
   sobreNosChild: {
     backgroundColor: Color.colorMediumblue,
     height: 110,
-    width: "100%", // Makes the blue box span the full width of the screen
+    width: "100%", 
     position: "absolute",
     left: 0,
     top: 0,
@@ -112,21 +131,21 @@ const styles = StyleSheet.create({
     textAlign: "center",
     display: "flex",
     height: 60,
-    width: "100%", // Updated to use full width
+    width: "100%", 
     position: "absolute",
   },
   sobreNsWrapper: {
     left: 0,
     height: 60,
     top: 0,
-    width: "100%", // Ensures wrapper spans the full width
-    alignItems: "center", // Centers the text horizontally
+    width: "100%", 
+    alignItems: "center",
   },
   sobreNosInner: {
     top: 24,
     left: 0,
     height: 60,
-    width: "100%", // Ensures the inner view spans the full width
+    width: "100%",
   },
   icon: {
     borderRadius: Border.br_141xl,
